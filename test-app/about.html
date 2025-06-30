@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sentiment Analysis Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for Inter font and general aesthetics */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right bottom, #6a11cb, #2575fc); /* Gradient background */
+            min-height: 100vh;
+            display: flex; /* Make body a flex container */
+            flex-direction: column; /* Stack children vertically */
+            padding: 0; /* Remove padding from body */
+            margin: 0;
+        }
+
+        /* New wrapper to center content and ensure nav doesn't overlap */
+        .main-content-wrapper {
+            flex-grow: 1; /* Allows this wrapper to take up available space, pushing footer down */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem; /* Add padding here instead of body */
+            padding-top: 5rem; /* Space for fixed nav bar */
+        }
+
+        /* Nav Bar Styles (same as index.html) */
+        nav {
+            background-color: #1a202c; /* Dark grey */
+            color: #fff;
+            padding: 1rem;
+            position: fixed; /* Fix to top */
+            top: 0;
+            width: 100%;
+            z-index: 100; /* Ensure it's on top of other content */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #2d3748; /* Slightly lighter grey on hover */
+        }
+
+        /* Footer Styles (same as index.html) */
+        footer {
+            background-color: #1a202c; /* Dark grey */
+            color: #a0aec0; /* Lighter grey for text */
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            margin-top: auto; /* Pushes footer to the bottom if content is short */
+        }
+
+        .about-container {
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Deeper shadow */
+            padding: 2.5rem;
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        /* Adjusted button style for consistency */
+        a.inline-flex.items-center {
+            transition: all 0.2s ease-in-out;
+        }
+        a.inline-flex.items-center:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+    <script>
+        // Tailwind CSS configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter">
+    <nav>
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+            <a href="index.html" class="text-2xl font-bold">Sentiment Analyzer</a>
+            <div>
+                <a href="about.html" class="ml-4">About Us</a>
+                <a href="index.html" class="ml-4">Dashboard</a>
+                <a href="history.html" class="ml-4">History</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content-wrapper">
+        <div class="about-container">
+            <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-4">About the Sentiment Analyzer</h1>
+
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                Welcome to the Sentiment Analyzer! This tool is designed to help you quickly understand the emotional tone and overall sentiment of any text data. Whether you're analyzing customer reviews, social media posts, or any other written content, our dashboard provides instant insights.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                Leveraging advanced language models, this application can identify if text is predominantly positive, negative, or neutral, and highlight specific emotions present within the content. Our goal is to provide a simple yet powerful way to gauge public opinion, customer satisfaction, or the general mood expressed in text.
+            </p>
+
+            <a href="index.html"
+               class="inline-flex items-center justify-center bg-blue-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 self-center">
+                Go to Sentiment Analyzer
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div> <footer>
+        <p>&copy; 2025 Sentiment Analyzer. All rights reserved.</p>
+        <p>Developed with ❤️ by Py#.</p>
+    </footer>
+</body>
+</html>
